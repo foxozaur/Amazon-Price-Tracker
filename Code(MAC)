@@ -29,7 +29,7 @@ def send_mail():
     server.ehlo() #Extends a connection between a connecting email and the connected email
     server.starttls() #encrypts our connection
     server.ehlo()
-    server.login('martynas.lape@gmail.com','jewtjgmzwxnjdtlw')
+    server.login('your@email.com','your password')
 
     subject = 'Price fell down'
     body = 'Check the Amazon link, your product price has dropped -  https://www.amazon.nl/Apple-MacBook-13-inch-SSD-opslag-Keyboard/dp/B0886YDRSK/ref=sr_1_3?__mk_nl_NL=%C3%85M%C3%85%C5%BD%C3%95%C3%91&dchild=1&keywords=macbook%2Bpro&qid=1598777977&sr=8-3&th=1'
@@ -41,10 +41,10 @@ def send_mail():
     print('E-mail has been sent')
 
     server.quit()
-#%%
-# Loop the e-mail.
+
+# I will use while() method to create a time loop for e-mail notifications.
 while(True):
     check_price()
     time.sleep(36000)
 
-# %%
+
